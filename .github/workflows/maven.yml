@@ -23,9 +23,9 @@ jobs:
         distribution: 'adopt'
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-      - name: Archive artifacts (SkillsPro)
-        uses: actions/upload-artifact@v1
-        if: success()
-        with:
-          name: SkillsPro
-          path: target/SkillsPro.jar
+    - name: Archive artifacts (SkillsPro)
+      uses: actions/upload-artifact@v1
+      if: success()  
+      with:
+        name: SkillsPro
+        path: target/SkillsPro.jar
